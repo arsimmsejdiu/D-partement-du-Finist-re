@@ -1,6 +1,10 @@
 import React from "react";
 import avatar from "../img/logo-header.png";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link } from "react-router-dom";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar() {
   return (
@@ -37,6 +41,20 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
+
+        <div className="icons">
+          <Link to="test" className="icon-holder">
+            <FontAwesomeIcon icon={faFacebook} className="icon fb" />
+          </Link>
+          <Link to="test" className="icon-holder">
+            <FontAwesomeIcon icon={faGithub} className="icon gh" />
+          </Link>
+          <Link to="test" className="icon-holder">
+            <FontAwesomeIcon icon={faYoutube} className="icon yt" />
+          </Link>
+        </div>
+
+        <button className="btn">INFORMATION</button>
 
         <footer className="footer">
           <p>@2021 Copyright Arsim Sejdiu</p>
